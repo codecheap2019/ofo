@@ -1,0 +1,7 @@
+<div ng-controller="ProductCtrl">
+  <div>Hello World</div>
+  <div>{{ heading }}</div>
+  <div ng-repeat="product in products | filter: ">
+    {{ product.name }}
+  </div>
+</div>

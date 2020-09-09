@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  <!-- Angular.js -->
+  <script src="https://cdn.jsdelivr.net/npm/angular@1.7.3/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div ng-view></div>
+  
+  <div class="bottom-bar">
+    <a href="#/!">
+     <ion-icon name="home-outline"></ion-icon>
+     <div>Home</div>
+    </a>
+    
+    <a href="#!search" class="lg">
+      <ion-icon name="search-outline"></ion-icon>
+      <div>Search</div>
+    </a>
+    
+    <a href="#!cart">
+      <ion-icon name="cart-outline"></ion-icon>
+      <div>Carts</div>
+    </a>
+    
+    <a href="#!account">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <div>Account</div>
+    </a>
+  </div>
+  <!-- Ionic Icons -->
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <script src="main.js"></script>
+  <script src="factory.js"></script>
+</body>
+</html>
