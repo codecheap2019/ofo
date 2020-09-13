@@ -1,4 +1,6 @@
 <div ng-controller="HomeCtrl" class="home">
+  <!-- Home Screen -->
+  <div ng-if="display">
   <div class="navbar">
     <div>
       <a href="#"><ion-icon name="location-outline"></ion-icon>&nbsp;12/8 Frankfurt, USA</a>
@@ -16,18 +18,27 @@
   <div class="filter-by-block">
     Filter By: <select ng-options="item as item.name for item in FilterBy track by item.value" ng-model="Filter_Cat"></select>
   </div>
-  <div>
+  <div ng-if="resturants">
     <div class="container" ng-repeat="res in resturants | filter:ajhs | orderBy:Filter_Cat.value" ng-click="setResturant(res.name)">
       <img ng-src="{{res.image}}" alt="" class="logo" />
       <div>
-        <h4>{{ res.name | uppercase }}</h4>
-        <p>{{ res.category }}</p>
+        <h4>{{ res.ResturantName | uppercase }}</h4>
+        <p>{{ res.Category }}</p>
         <div class="info-panel">
-          <div><ion-icon name="star-outline"></ion-icon>&nbsp;{{ res.rating }}</div>
-          <div><ion-icon name="hourglass-outline"></ion-icon>&nbsp;{{ res.adt }}</div>
+          <div><ion-icon name="star-outline"></ion-icon>&nbsp;{{ res.Rating }}</div>
+          <div><ion-icon name="hourglass-outline"></ion-icon>&nbsp;{{ res.DeliveryTime }}</div>
         </div>
       </div>
     </div>
   </div>
-  <h3 style="color:red;text-align: center;">This App Only For Demo Purpose</h3>
+  <!-- Container -->
+  <div ng-if="!resturants">
+    Please Wait Loading....
+  </div>
+  </div>
+  <!-- /-->
+  <!-- Product Screen -->
+  <div ng-if="!display">
+    <div>Hello World</div>
+  </div>
 </div>

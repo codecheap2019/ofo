@@ -1,33 +1,14 @@
 app.factory('Resturant', ()=>{
   var factory = {};
-  var resturant = [{
-    name: "Domino's Pizza",
-    category: "Pizza", 
-    rating: 4.6,
-    adt: 27, 
-    image: 'image/dominos_social_logo.jpg'
-  }, {
-    name: "McDonald's", 
-    category: "Snacks & Beverages", 
-    rating: 4.7,
-    adt: 34, 
-    image: 'image/m-logo_108x108.jpg'
-  }, {
-    name: "Pizza Hut", 
-    category: "Pizza", 
-    rating: 3.9,
-    adt: 40, 
-    image: 'image/pizzahut-logo_freelogovectors.net_.png'
-  }, {
-    name: "Burger King",
-    category: "Burger", 
-    rating: 4.2,
-    adt: 25, 
-    image: 'image/593px-Burger_King_logo.svg.png'
-  }]
+  var resturant = []
   
   factory.getResturant = ()=> {
     return resturant
+  }
+  
+  factory.addRes = (res)=>{
+    alert("Data Received ")
+    resturant.push(res)
   }
   
   return factory;
